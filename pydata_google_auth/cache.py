@@ -139,7 +139,7 @@ def _load_service_account_credentials_from_file(credentials_path, **kwargs):
 
 def _load_service_account_credentials_from_info(credentials_json, **kwargs):
     credentials = service_account.Credentials.from_service_account_info(
-        credentials_json, **kwargs
+        credentials_json, scopes=credentials_json.get("scopes"), **kwargs
     )
     if not credentials.valid:
         request = google.auth.transport.requests.Request()
