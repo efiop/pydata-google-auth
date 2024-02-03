@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=64", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pydata-google-auth"
+dynamic = ["version"]
+description = "PyData helpers for authenticating to Google APIs"
+readme = "README.md"
+license = { text = "BSD" }
+authors = [{ name = "The PyData Development Team", email="pydata@googlegroups.com" }]
+requires-python = ">=3.7"
+keywords = ["data"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "License :: OSI Approved :: BSD License",
+]
+dependencies = [
+    "setuptools",
+    "google-auth >=1.25.0, <2.0dev;  python_version<'3.0'",
+    "google-auth >=1.25.0, <3.0dev; python_version>='3.6'",
+    "google-auth-oauthlib >=0.4.0, <0.4.2dev; python_version<'3.0'",
+    "google-auth-oauthlib >=0.4.0; python_version>='3.6'",
+]
+
+[project.urls]
+Source = "https://github.com/pydata/pydata-google-auth"
+
+[tool.setuptools]
+packages = ["pydata_google_auth"]
+
+[tool.setuptools_scm]
